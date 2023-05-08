@@ -1,7 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/TafveezA/BlockchainNetwork/network"
+)
 
 func main() {
-	fmt.Print("testing :")
+	trLocal := network.NewLocalTransport("Local")
+
+opts := network.NewServer(opts)(
+	Transports: []network.Transport{trLocal}
+)
 }
